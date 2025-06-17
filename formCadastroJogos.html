@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cadastro de jogos</h2>
+    <form id="formCadastroJogos">
+    <label for="titulo">Tìtulo</label>
+    <input type="text" id="titulo" name="titulo" required>
+    <br>
+    <label for="Ano">Ano de Lançamento</label>
+    <input type="text" id="ano" name="ano" required>
+    <br>
+    <select name="plataforma" id="plataforma">plataforma
+        <option value="">Selecione...</option>
+        <option value="pc">PC</option>
+        <option value="ps4">PS4</option>
+        <option value="xbox">Xbox</option>
+        <option value="switch">Switch</option>
+        <option value="mobile">Mobile</option>
+        <option value="ps5">PS5</option>
+        <option value="xboxSeriesX">Xbox Series X</option>
+        <option value="nintendoSwitch">Nintendo Switch</option>
+        <option value="ps3">PS3</option>
+    </select>
+    <br>
+    <select name="genero" id="genero">Genêro
+        <option value="">Selecione...</option>
+        <option value="acao">Ação</option>
+        <option value="aventura">Aventura</option>
+        <option value="fantasia">Fantasia</option>
+        <option value="ficcao">Ficção Científica</option>
+        <option value="romance">Romance</option>
+        <option value="terror">Terror</option>
+        <option value="esporte">Esporte</option>
+        <option value="estrategia">Estratégia</option>
+        <option value="rpg">RPG</option>
+        <option value="simulacao">Simulação</option>
+        <option value="corrida">Corrida</option>
+        <option value="luta">Luta</option>
+    </select>
+    <button type="submit">Cadastrar jogo</button>
+    </form>
+    <!--Lista de jogos-->
+    <h3>Jogos cadastrados</h3>
+    <ul id="listaJogos"></ul>
+    <script src="formCadastroJogos.js"></script>
+
+    
+</body>
+</html>
