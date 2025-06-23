@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convocação para a Seleção Brasileira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #009C3B 0%, #FFDF00 50%, #009C3B 100%);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 2px solid #002776;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-selecao {
+            background: linear-gradient(to right, #009C3B, #FFDF00);
+            background-size: 200% auto;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-selecao:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .checkbox-selecao:checked {
+            background-color: #009C3B;
+            border-color: #009C3B;
+        }
+        
+        .radio-selecao:checked {
+            background-color: #FFDF00;
+            border-color: #002776;
+        }
+        
+        .input-focus:focus {
+            border-color: #002776;
+            box-shadow: 0 0 0 3px rgba(0, 39, 118, 0.3);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="card max-w-2xl w-full mx-auto rounded-xl overflow-hidden p-8 pulse">
+        <!-- Cabeçalho com as cores da bandeira -->
+        <div class="flex mb-6">
+            <div class="h-2 bg-green-600 flex-1"></div>
+            <div class="h-2 bg-yellow-400 flex-1"></div>
+            <div class="h-2 bg-blue-800 flex-1"></div>
+        </div>
+        
+        <h1 class="text-4xl font-bold text-center text-blue-800 mb-2">
+            <span class="text-green-600">CONVOCAÇÃO</span> 
+            <span class="text-yellow-400">SELEÇÃO</span> 
+            <span class="text-blue-800">BRASILEIRA</span>
+        </h1>
+        
+        <div class="text-center mb-8">
+            <img src="https://logodownload.org/wp-content/uploads/2016/11/confederacao-brasileira-futebol-cbf-logo-1.png" 
+                 alt="Logo CBF" 
+                 class="h-16 mx-auto mb-4">
+            <p class="text-sm text-gray-600">Preencha o formulário para concorrer a uma vaga na seleção</p>
+        </div>
+        
+        <form id="formJogador" class="space-y-6">
+            <!-- Campo Nome -->
+            <div class="transform hover:scale-[1.01] transition-transform">
+                <label for="nome" class="block text-sm font-bold uppercase text-blue-800 mb-1">Nome do Jogador</label>
+                <input type="text" id="nome" name="nome" required 
+                       class="w-full px-4 py-3 border-2 border-yellow-400 rounded-lg input-focus 
+                              placeholder-gray-400 bg-white/90">
+            </div>
+            
+            <!-- Habilidades -->
+            <div class="transform hover:scale-[1.01] transition-transform">
+                <label class="block text-sm font-bold uppercase text-blue-800 mb-2">Habilidades:</label>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <label class="flex items-center space-x-2 bg-green-50 p-2 rounded-lg cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="habilidades" value="passe" 
+                               class="h-5 w-5 rounded border-2 border-yellow-400 checkbox-selecao">
+                        <span class="font-medium text-green-800">Passe</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-green-50 p-2 rounded-lg cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="habilidades" value="drible" 
+                               class="h-5 w-5 rounded border-2 border-yellow-400 checkbox-selecao">
+                        <span class="font-medium text-green-800">Drible</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-green-50 p-2 rounded-lg cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="habilidades" value="chute" 
+                               class="h-5 w-5 rounded border-2 border-yellow-400 checkbox-selecao">
+                        <span class="font-medium text-green-800">Chute</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-green-50 p-2 rounded-lg cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="habilidades" value="marcacao" 
+                               class="h-5 w-5 rounded border-2 border-yellow-400 checkbox-selecao">
+                        <span class="font-medium text-green-800">Marcação</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-green-50 p-2 rounded-lg cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="habilidades" value="velocidade" 
+                               class="h-5 w-5 rounded border-2 border-yellow-400 checkbox-selecao">
+                        <span class="font-medium text-green-800">Velocidade</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-green-50 p-2 rounded-lg cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="habilidades" value="fisico" 
+                               class="h-5 w-5 rounded border-2 border-yellow-400 checkbox-selecao">
+                        <span class="font-medium text-green-800">Físico</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Posição -->
+            <div class="transform hover:scale-[1.01] transition-transform">
+                <label class="block text-sm font-bold uppercase text-blue-800 mb-2">Posição:</label>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="centroavante" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Centroavante</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="meia" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Meia</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="lateral" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Lateral</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="zagueiro" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Zagueiro</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="goleiro" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Goleiro</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="volante" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Volante</span>
+                    </label>
+                    <label class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg cursor-pointer hover:bg-blue-100">
+                        <input type="radio" name="posicao" value="ponta" 
+                               class="h-5 w-5 border-2 border-blue-800 radio-selecao">
+                        <span class="font-medium text-blue-800">Ponta</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Data de estreia -->
+            <div class="transform hover:scale-[1.01] transition-transform">
+                <label for="estreia" class="block text-sm font-bold uppercase text-blue-800 mb-1">Data de estreia na Seleção:</label>
+                <input type="date" id="estreia" name="estreia" required 
+                       class="w-full px-4 py-3 border-2 border-yellow-400 rounded-lg input-focus bg-white/90">
+            </div>
+            
+            <!-- Botão de envio -->
+            <button type="submit" 
+                    class="w-full btn-selecao text-white font-bold py-4 px-4 rounded-lg 
+                           uppercase tracking-wider text-lg transition-all duration-300 mt-6">
+                <span class="drop-shadow-md">CONCORRER À VAGA</span>
+            </button>
+        </form>
+        
+        <!-- Lista de jogadores -->
+        <div class="mt-10">
+            <h2 class="text-2xl font-bold text-center text-blue-800 mb-4 border-b-2 border-yellow-400 pb-2">
+                <span class="bg-green-600 text-white px-3 py-1 rounded-lg">JOGADORES CONVOCADOS</span>
+            </h2>
+            <ul id="listaJogadores" class="space-y-3">
+                <!-- Lista de jogadores será preenchida aqui-->
+            </ul>
+        </div>
+        
+        <!-- Rodapé -->
+        <div class="mt-8 text-center text-sm text-gray-600">
+            <p>Seleção Brasileira © 2023 - Todos os direitos reservados</p>
+            <div class="flex justify-center space-x-2 mt-2">
+                <span class="h-3 w-3 bg-green-600 rounded-full inline-block"></span>
+                <span class="h-3 w-3 bg-yellow-400 rounded-full inline-block"></span>
+                <span class="h-3 w-3 bg-blue-800 rounded-full inline-block"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="formCadastroJogador.js"></script>
+</body>
+</html>

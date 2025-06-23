@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix china</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Menu da Copa do Mundo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="logo">
-            <a href="#">Netflix china</a>
+<body class="min-h-screen flex items-center justify-center p-4 bg-gray-50">
+    <div class="w-full max-w-md bg-white shadow-none border border-gray-200 p-8">
+        <div class="mb-10 text-center">
+            <h1 class="text-3xl font-bold uppercase tracking-wider text-gray-900 mb-2">COPA DO MUNDO</h1>
+            <div class="h-0.5 w-20 bg-gray-800 mx-auto"></div>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Series</a></li>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="#">Minha Lista</a></li>
-            </ul>
-            <div class="user-actions">
-                <a href="#" class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg></a>
-                <a href="#" class="profile-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                  </svg></a>
-            </div>
+        
+        <!-- Menu de navegação -->
+        <nav class="flex flex-col gap-5">
+            <a href="formCadastroJogador.html"
+               class="nav-link bg-gray-900 text-white p-4 text-center uppercase tracking-wider font-medium
+                      hover:bg-gray-800 hover:shadow-md transition-all duration-300 border border-gray-900">
+               Cadastro de Jogador da Seleção
+            </a>
+            
+            <a href="formCadastro.html"
+               class="nav-link bg-white text-gray-900 p-4 text-center uppercase tracking-wider font-medium
+                      hover:bg-gray-100 hover:shadow-md transition-all duration-300 border border-gray-900">
+               Formulário de Cadastro de Usuário
+            </a>
         </nav>
-    </header>
-    <footer class="footer">
-        <div class="footer">
-            <a href="#">Perguntas frequentes</a>
-            <a href="#">Ajuda</a>
-            <a href="#">Termos de Uso</a>
-            <a href="#">Suporte</a>
-            <a href="#">Politica de privacidade</a>
-            <a href=""></a>
+        
+        <div class="mt-8 text-center text-xs text-gray-500 uppercase tracking-wider">
+            FIFA World Cup 2026
         </div>
-    </footer>
+    </div>
 </body>
 </html>
